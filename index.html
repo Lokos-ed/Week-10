@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+</head>
+<body>
+    <!--This creates a table that is striped, dark, and bordered with the text aligned to the center.-->
+    <table class="table table-striped table-dark table-bordered" style="text-align: center">
+        <thead>
+            <!--This creates the headers for the table-->
+            <th>Game</th>
+            <th>Console</th>
+            <th>Release Date</th>
+            <th>Copies Sold (Millions)</th>
+        </thead>
+        <!--This creates the table body with a unique ID to be called upon in the script-->
+        <tbody id="tableBody">
+            <!--This is an example row with data for the table, the background color sets it to a specific shade of red-->
+            <tr style="background-color: #e03444">
+                <td>Super Mario Bros. Wonder</td>
+                <td>Nintendo Switch</td>
+                <td>October 20, 2023</td>
+                <td>15.51M</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <!--This creates a div with padding to the left and the bottom of the element-->
+        <div style="padding-left: 30px; padding-bottom: 30px;">
+            <!--This creates a label for the input ID which allows it to store the value of whatever is inputted into the text box-->
+            <label for="gameName">Game Name</label>
+            <br>
+            <input type="text" id="gameName">
+        </div>
+        <div style="padding-left: 30px; padding-bottom: 30px;">
+            <label for="consoleName">Console</label>
+            <br>
+            <!--This creates a drop down with five options. Each of them have their own displayed text and the actual value that is returned when selected-->
+            <!--The "selected" in the option for PC makes it so the dropdown will automatically start on that position when the page is refreshed-->
+            <select id="consoleName" name="Console">
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="PS5">Playstation 5</option>
+                <option value="Xbox Series X">Xbox Series X</option>
+                <option value="PC" selected>PC</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div style="padding-left: 30px; padding-bottom: 30px;">
+            <label for="releaseDate">Release Date</label>
+            <br>
+            <input type="text" id="releaseDate">
+        </div>
+        <div style="padding-left: 30px; padding-bottom: 30px;">
+            <label for="copiesSold">Copies Sold</label>
+            <br>
+            <input type="text" placeholder="Millions" id="copiesSold">
+        </div>
+        <div style="padding-left: 30px; padding-bottom: 30px;">
+            <br>
+            <!--This creates a button that submits the contents of the form to the values of the set IDs.-->
+            <!--The class gives it the bootstrap button design, white text, and a red color for the button.-->
+            <input type="submit" class="btn bg-danger text-light" id="submitButton"></input>
+        </div>
+    </form>
+
+<!--These call on the dependencies from bootstrap and jquery as well as the script written in JavaScript to make the different stylizations and the code from the JavaScript work in this file-->
+    <script src="script.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
